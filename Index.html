@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloom & Bliss - Premium Flower Bouquets</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-spa"></i>
+                <span>Bloom & Bliss</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#shop" class="nav-link">Shop</a>
+                <a href="#about" class="nav-link">About Us</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <a href="#order" class="nav-link order-btn">Order Now</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Say it with Flowers</h1>
+            <p class="hero-subtitle">Handcrafted bouquets for every moment that matters</p>
+            <button class="cta-button" onclick="scrollToSection('shop')">Shop Now</button>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1563241527-3004b7be0ffd?w=800" alt="Beautiful flower bouquet">
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title">Choose Your Perfect Bouquet</h2>
+            <div class="category-grid">
+                <div class="category-card" onclick="filterBouquets('romantic')">
+                    <img src="https://images.unsplash.com/photo-1522057384400-681b421cfebc?w=400" alt="Romantic bouquets">
+                    <h3>Romantic</h3>
+                    <p>Express your love</p>
+                </div>
+                <div class="category-card" onclick="filterBouquets('festive')">
+                    <img src="https://images.unsplash.com/photo-1561181286-d3fee7d55364?w=400" alt="Festive bouquets">
+                    <h3>Festive</h3>
+                    <p>Celebrate in style</p>
+                </div>
+                <div class="category-card" onclick="filterBouquets('sympathy')">
+                    <img src="https://images.unsplash.com/photo-1578836537282-3171d77f8632?w=400" alt="Sympathy bouquets">
+                    <h3>Sympathy</h3>
+                    <p>Show you care</p>
+                </div>
+                <div class="category-card" onclick="scrollToSection('order')">
+                    <img src="https://images.unsplash.com/photo-1567696911980-2eed69a46042?w=400" alt="Custom bouquets">
+                    <h3>Custom-Made</h3>
+                    <p>Design your own</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop Section -->
+    <section id="shop" class="shop">
+        <div class="container">
+            <h2 class="section-title">Our Collection</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" onclick="filterBouquets('all')">All</button>
+                <button class="filter-btn" onclick="filterBouquets('romantic')">Romantic</button>
+                <button class="filter-btn" onclick="filterBouquets('festive')">Festive</button>
+                <button class="filter-btn" onclick="filterBouquets('sympathy')">Sympathy</button>
+            </div>
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">Our Story</h2>
+                    <p>Welcome to Bloom & Bliss, where every petal tells a story. Founded in 2020, we've been crafting emotions into beautiful floral arrangements that speak the language of the heart.</p>
+                    <p>Our passionate team of florists brings over 20 years of combined experience, ensuring each bouquet is a masterpiece. We source the freshest flowers from local growers and international markets to guarantee quality and beauty in every arrangement.</p>
+                    <p>Whether it's a declaration of love, a celebration of life, or a gesture of sympathy, we believe flowers have the power to convey what words cannot. Let us help you create unforgettable moments.</p>
+                    <button class="cta-button secondary" onclick="scrollToSection('contact')">Get in Touch</button>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1487070183336-b863922373d4?w=600" alt="Our florist at work">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Visit Us</h4>
+                            <p>123 Flower Street, Garden City, GC 12345</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Call Us</h4>
+                            <p>(555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email Us</h4>
+                            <p>hello@bloomandbliss.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Working Hours</h4>
+                            <p>Mon-Sat: 9AM - 7PM<br>Sun: 10AM - 5PM</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" onsubmit="handleContactSubmit(event)">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <input type="tel" placeholder="Your Phone">
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit" class="cta-button">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Form Section -->
+    <section id="order" class="order-form">
+        <div class="container">
+            <h2 class="section-title">Place Your Order</h2>
+            <form class="order-form-content" onsubmit="handleOrderSubmit(event)">
+                <div class="form-section">
+                    <h3>Select Your Bouquet</h3>
+                    <select id="bouquetSelect" required>
+                        <option value="">Choose a bouquet...</option>
+                        <option value="eternal-love">Eternal Love - $89</option>
+                        <option value="spring-joy">Spring Joy - $65</option>
+                        <option value="peaceful-white">Peaceful White - $75</option>
+                        <option value="custom">Custom Bouquet - Price varies</option>
+                    </select>
+                </div>
+
+                <div class="form-section">
+                    <h3>Recipient Details</h3>
+                    <input type="text" placeholder="Recipient Name" required>
+                    <input type="text" placeholder="Delivery Address" required>
+                    <input type="tel" placeholder="Recipient Phone" required>
+                </div>
+
+                <div class="form-section">
+                    <h3>Personal Message</h3>
+                    <textarea placeholder="Write your message for the card..." rows="4"></textarea>
+                </div>
+
+                <div class="form-section">
+                    <h3>Delivery Details</h3>
+                    <input type="date" id="deliveryDate" required>
+                    <select required>
+                        <option value="">Delivery Time</option>
+                        <option value="morning">Morning (9AM - 12PM)</option>
+                        <option value="afternoon">Afternoon (12PM - 5PM)</option>
+                        <option value="evening">Evening (5PM - 8PM)</option>
+                    </select>
+                </div>
+
+                <div class="form-section">
+                    <h3>Your Information</h3>
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <input type="tel" placeholder="Your Phone" required>
+                </div>
+
+                <button type="submit" class="cta-button">Proceed to Payment</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Instagram Feed Preview -->
+    <section class="instagram-feed">
+        <div class="container">
+            <h2 class="section-title">Follow Us on Instagram</h2>
+            <div class="instagram-grid">
+                <div class="instagram-post">
+                    <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=300" alt="Instagram post">
+                    <div class="instagram-overlay">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </div>
+                <div class="instagram-post">
+                    <img src="https://images.unsplash.com/photo-1469259943454-aa100abba749?w=300" alt="Instagram post">
+                    <div class="instagram-overlay">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </div>
+                <div class="instagram-post">
+                    <img src="https://images.unsplash.com/photo-1502977249166-824b3a8a4d6d?w=300" alt="Instagram post">
+                    <div class="instagram-overlay">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </div>
+                <div class="instagram-post">
+                    <img src="https://images.unsplash.com/photo-1464820453369-31d2c0b651af?w=300" alt="Instagram post">
+                    <div class="instagram-overlay">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </div>
+            </div>
+            <button class="cta-button secondary" onclick="window.open('https://instagram.com', '_blank')">
+                <i class="fab fa-instagram"></i> @bloomandbliss
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Bloom & Bliss</h4>
+                    <p>Creating beautiful moments with flowers since 2020</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="#shop">Shop</a>
+                    <a href="#about">About Us</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#order">Order Now</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> hello@bloomandbliss.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Flower Street, Garden City</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Working Hours</h4>
+                    <p>Monday - Saturday: 9AM - 7PM</p>
+                    <p>Sunday: 10AM - 5PM</p>
+                    <button class="cta-button secondary" onclick="scrollToSection('order')">Send Love</button>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Bloom & Bliss. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+                      </html>
